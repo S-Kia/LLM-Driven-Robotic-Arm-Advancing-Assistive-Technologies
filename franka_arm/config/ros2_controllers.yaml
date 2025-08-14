@@ -1,0 +1,44 @@
+# This config file is used by ros2_control
+controller_manager:
+  ros__parameters:
+    update_rate: 100  # Hz
+
+    arm_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+
+    gripper_controller:
+      type: position_controllers/GripperActionController
+
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+arm_controller:
+  ros__parameters:
+    joints:
+      - fr3v2_joint1
+      - fr3v2_joint2
+      - fr3v2_joint3
+      - fr3v2_joint4
+      - fr3v2_joint5
+      - fr3v2_joint6
+      - fr3v2_joint7
+    command_interfaces:
+      - position # <--- ADD THIS
+    state_interfaces:
+      - position # <--- ADD THIS
+      - velocity # <--- This is generally good practice to include
+gripper_controller:
+  ros__parameters:
+    joint: fr3v2_finger_joint1
+    # For gripper controllers, you might also need command/state interfaces,
+    # and possibly 'min_value', 'max_value' for the joint.
+    # Example:
+    # command_interfaces:
+    #   - position
+    # state_interfaces:
+    #   - position
+    #   - velocity
+    # min_value: 0.0
+    # max_value: 0.04 # Example max opening

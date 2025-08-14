@@ -1,0 +1,16 @@
+octomap_frame: world
+octomap_resolution: 0.01
+
+sensors:
+  - camera_1_pointcloud
+
+camera_1_pointcloud:
+  sensor_plugin: occupancy_map_monitor/PointCloudOctomapUpdater
+  point_cloud_topic: /Camera_OmniVision_OV9782_Color/points
+  max_range: 3.0
+  point_subsample: 2
+  padding_offset: 0.03     # ↑ inflate robot links a bit (try 0.02–0.05)
+  padding_scale: 1.0
+  max_update_rate: 30.0
+  filtered_cloud_topic: /Camera_OmniVision_OV9782_Color/filtered_points
+
