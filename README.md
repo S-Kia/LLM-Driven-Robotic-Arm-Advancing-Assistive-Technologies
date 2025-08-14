@@ -2,7 +2,14 @@
 
 **Franka Emika Panda + ROS 2 MoveIt 2 + Isaac Sim 4.5 + Dify**
 
-Video demonstration: \[[https://youtu.be/8X\_k8fNZt\_k\](https://youtu.be/8X\_k8fNZt\_k)](https://youtu.be/8X_k8fNZt_k]%28https://youtu.be/8X_k8fNZt_k%29)
+Video demonstration: https://youtu.be/8X_k8fNZt_k
+
+## Dify Framework Overview
+![Dify Framework](image/dify-framework.png)
+
+
+## How to Control the Robot
+![How to Control](image/how-to-control.png)
 
 ## Overview
 
